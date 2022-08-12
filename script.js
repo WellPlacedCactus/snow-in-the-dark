@@ -27,6 +27,8 @@ const run = async () => {
   
     //////////////////////////////////////////////// iterate
 
+    c.fillStyle = 'white';
+
     for (let i = parts.length - 1; i >= 0; --i) {
       const { x, y, r } = parts[i];
 
@@ -36,7 +38,6 @@ const run = async () => {
       c.beginPath();
       c.arc(x[0], y[0], r[0], 0, Math.PI * 2);
       c.closePath();
-      c.fillStyle = 'white';
       c.fill();
 
       if (x[0] > canvas.width || y[0] > canvas.height) parts.splice(i, 1);
